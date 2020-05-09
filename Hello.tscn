@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Hello.gd" type="Script" id=1]
+[ext_resource path="res://Label2.gd" type="Script" id=2]
+
+[node name="Panel" type="Panel"]
+margin_right = 579.0
+margin_bottom = 416.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 102.0
+margin_top = 79.0
+margin_right = 470.0
+margin_bottom = 138.0
+text = "This is a label"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 107.0
+margin_top = 197.0
+margin_right = 468.0
+margin_bottom = 263.0
+text = "Press Me"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 79.0
+margin_top = 313.0
+margin_right = 264.0
+margin_bottom = 369.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

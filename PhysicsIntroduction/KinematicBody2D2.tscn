@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://KinematicBody2D2.gd" type="Script" id=1]
+[ext_resource path="res://dodge_assets/dodge_assets/art/playerGrey_up1.png" type="Texture" id=2]
+[ext_resource path="res://dodge_assets/dodge_assets/art/playerGrey_up2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 56.1529
+height = 24.2172
+
+[node name="KinematicBody2D2" type="KinematicBody2D"]
+position = Vector2( 359.848, 237.109 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
